@@ -873,7 +873,7 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
     background:#222;
   }
   .packages .box-container .box-tour .box {
-    width: calc(50% - 2rem);
+    width: 100%;
     border-radius: .5rem;
     overflow: hidden;
     box-shadow: 0 1rem 2rem rgb(0 0 0 / 10%);
@@ -894,13 +894,8 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
   .contact .row form .inputBox input{
     width:100%;
 
-    
+
   }
-  .packages .box-container .box-tour .box {
-    width: 100%;
-    border-radius: .5rem;
-    overflow: hidden;
-    box-shadow: 0 1rem 2rem rgb(0 0 0 / 10%);
-  }
+
 
 }
