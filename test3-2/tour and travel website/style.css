@@ -828,7 +828,11 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
   }
 
 }
+@media screen and( max-width:1023px)  {
+ 
 
+  
+}
 @media (max-width:991px){
 
   header{
@@ -838,6 +842,7 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
   section{
     padding:2rem;
   }
+  
 
 }
 
@@ -866,6 +871,12 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
     padding:1.5rem;
     margin:1.5rem 0;    
     background:#222;
+  }
+  .packages .box-container .box-tour .box {
+    width: calc(50% - 2rem);
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgb(0 0 0 / 10%);
   }
 
 }
