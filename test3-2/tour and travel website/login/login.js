@@ -74,15 +74,14 @@ let data = [
 		let emailValue = inputEmail_login.value;
 		let passwordValue = inputPassword_login.value
 
-		const url = `https://serverjson123.herokuapp.com/login?email=${emailValue}`;
-		console.log(url)
+		const url = `https://serverjson123.herokuapp.com/login?userName=${emailValue}`;
 		const response = await fetch(url);
 		const account = await response.json()
 		account.forEach((value)=>{
 		if(value.passWord === passwordValue) {
 			localStorage.setItem('current-user', JSON.stringify(account))
 				alert('Bạn đã đăng nhập thành công')
-				// window.location = "../index.html"
+				window.location = "../index.html"
 				// await updateUser()
 
 			} 
