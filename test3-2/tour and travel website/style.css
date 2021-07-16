@@ -893,6 +893,8 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
 
   .contact .row form .inputBox input{
     width:100%;
+
+    
   }
   .packages .box-container .box-tour .box {
     width: 100%;
