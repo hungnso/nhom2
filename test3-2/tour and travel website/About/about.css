@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
 * {
-    font-family: "Quicksand", Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 14px;
     line-height: 1.7;
     color: #595959;
@@ -79,9 +81,23 @@ a:hover {
     text-align: center;
     margin: auto;
 }
+.user{
+    font-size: 26px;
+    font-weight: 700;
+    color: #00BBF0;
+}
+.title-share{
+    font-size: 20px;
+    font-weight: 500;
+}
 p {
     margin-bottom: 20px;
     margin: 0 0 10px;
+}
+.user-function{
+    font-size: 18px;
+    color: red;
+    font-weight: 500;
 }
 .img-person1 {
     width: 70px;
