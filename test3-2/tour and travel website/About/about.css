@@ -80,6 +80,7 @@ a:hover {
     width: 500px;
     text-align: center;
     margin: auto;
+    margin-bottom: 60px;
 }
 .user{
     font-size: 26px;
