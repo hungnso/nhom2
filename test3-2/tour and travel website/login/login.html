@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <header>
+        <button onclick="document.getElementById('login').style.display='block'">Login</button>
+        <button onclick="document.getElementById('sign--up').style.display='block'">Sign Up</button>
+    </header>
+    <div class="login" id="login">
+        <form id="form__login" method="GET" class="hung">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close">&times;</span>
+              </div>
+            <h3>Login</h3>
+            <input type="email" class="box" id="email__login" placeholder="Enter your email">
+            <input type="password" class="box" id="pw__login" placeholder="Enter your password">
+            <input type="submit" id="submit__login"value="login now" class="btn">
+            <input type="checkbox" id="remember">
+            <label for="remember">remember me</label>
+            <p>forget password? <a href="#">click here</a></p>
+        </form>
+    </div>
+    <div class="sign--up" id="sign--up">
+        <form  id="form-sing-up">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('sign--up').style.display='none'" class="close" title="Close">&times;</span>
+              </div>
+            <h3>Sign UP</h3>
+            <input type="email" class="box" id="email" placeholder="Enter your email">
+            <input type="password" class="box" id="password" placeholder="Enter your password">
+            <input type="password" class="box" id="password--confirm" placeholder="Confirm your password">
+            <input type="submit" value="Sign Up" class="btn--signUp" onclick="validate()">
+        </form>
+    </div>
+
+    <section class="backgroud"></section>
+    
+    <script src="./login.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\.."
+		},
+		{
+			"path": "..\\..\\jsonsv -"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Nhóm 2"
+	}
+}

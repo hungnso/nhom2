@@ -1,0 +1,125 @@
+* {
+    font-family: "Quicksand", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #595959;
+}
+.about-flex {
+    display: flex;
+    justify-content: center;
+}
+.card-left {
+    width: 30%;
+    background-color: #00BBF0;
+    color: white;
+    text-align: end;
+    padding-right: 20px;
+    padding-top: 50px;
+}
+.card-left h2 {
+    text-align: end;
+    width: 100%;
+}
+.img-responsive {
+    width: 250px;
+    height: 150px;
+}
+.about-flex .about {
+    text-align: right;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.about-flex .about h2 {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding-bottom: 20px;
+}
+h2 {
+    font-size: 30px;
+}
+
+.about-flex .about ul {
+    list-style: none;
+}
+.about-flex .about ul li {
+    margin-bottom: 8px;
+    list-style: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
+    color: black;
+}
+
+.card-right {
+    width: 70%;
+    padding-top: 22px;
+    padding-left: 50px;
+    opacity: 0.8;
+}
+.row-pb-sm {
+    display: flex;
+}
+.col-md-6 {
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.container2 {
+    text-align: center;
+    padding-top: 50px;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+}
+p {
+    margin-bottom: 20px;
+    margin: 0 0 10px;
+}
+.img-person1 {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.img-person2 {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.prev, .next {
+    cursor: pointer;
+    padding: 16px;
+    margin-top: -22px;
+    color: orange;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: papayawhip;
+  }
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.title {
+    font-size: 30px;
+    color: black;
+}
+.slide {
+    background-color: orchid;
+    width: 100%;
+}
+small {
+    opacity: 0.7;
+}
