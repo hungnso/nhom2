@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel</title>
+    <title>Login</title>
     <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-    <header>
-        <button onclick="document.getElementById('login').style.display='block'">Login</button>
-        <button onclick="document.getElementById('sign--up').style.display='block'">Sign Up</button>
+    <header class="container">
+        <div class="logo">
+            <img src="../images/icon.png" alt="">
+            <a href="../index.html" class=""><span>T</span>ravel</a>
+        </div>
+        <div class="form-container">
+            <button onclick="document.getElementById('login').style.display='block'">Login</button>
+            <button onclick="document.getElementById('sign--up').style.display='block'">Sign Up</button>
+        </div>
+        
     </header>
+    <!-- <section class="content">
+
+    </section> -->
     <div class="login" id="login">
         <form id="form__login" method="GET" class="hung">
             <div class="imgcontainer">
@@ -39,7 +49,9 @@
         </form>
     </div>
 
-    <section class="backgroud"></section>
+    <section class="backgroud">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80" alt="">
+    </section>
     
     <script src="./login.js"></script>
 </body>

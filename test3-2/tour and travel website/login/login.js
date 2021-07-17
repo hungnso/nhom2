@@ -73,7 +73,6 @@ let data = [
 		e.preventDefault()
 		let emailValue = inputEmail_login.value;
 		let passwordValue = inputPassword_login.value
-
 		const url = `https://serverjson123.herokuapp.com/login?userName=${emailValue}`;
 		const response = await fetch(url);
 		const account = await response.json()
@@ -85,14 +84,16 @@ let data = [
 				// await updateUser()
 
 			} 
-			else{
-				alert('Mật khẩu không chính xác ')
+			else if( emailValue !== value.userName){
+				alert('Lai sai')
+			} else{
+				alert('Mật khẩu không chính xác')
 			}
-		})
+	 	})
 		
 
 	   
-	}
+	 }
 
 	let userAPI = "https://serverjson123.herokuapp.com/login"
 	function creatUser(data,cb){
