@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", function(){
     searchBar.classList.remove('active');
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
-    loginForm.classList.remove('active');
+    // loginForm.classList.remove('active');
 }
 cartBtn.addEventListener("click", () =>{
   cartForm.classList.add("active")

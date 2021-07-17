@@ -826,10 +826,30 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
   html{
     font-size: 55%;
   }
+  
 
 }
-@media screen and( max-width:1023px)  {
- 
+@media (max-width: 1355px) {
+  .cart-container{
+    width: 700px;
+  }
+  .cart-tour-name{
+    font-size: 20px;
+  }
+  .cart-tour-price{
+    font-size: 20px;
+  }
+}
+@media (max-width:1023px)  {
+  .cart-container{
+    width: 600px;
+  }
+  .cart-tour-name{
+    font-size: 20px;
+  }
+  .cart-tour-price{
+    font-size: 20px;
+  }
 
   
 }
@@ -895,6 +915,22 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
     width:100%;
 
 
+  }
+
+  .cart-container{
+    width: 100%;
+  }
+  .cart-book{
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-img{
+    width: 100%;
+    margin-right: 0;
+  }
+  .cart-header{
+    top: 0;
+    right: 10px;
   }
 
 
