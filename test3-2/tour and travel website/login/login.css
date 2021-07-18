@@ -317,5 +317,23 @@ header .logo span{
         right: 0;
         top: -6px;
     }
+    .sign--up form .box {
+        width: 100%;
+        padding: 15px;
+        font-size: 20px;
+        color: #333;
+        margin: 10px 0;
+        border: .20px solid rgba(0,0,0, .3);
+        text-transform: none;
+    }
+    .login form .box {
+        width: 100%;
+        padding: 15px;
+        font-size: 20px;
+        color: #333;
+        margin: 10px 0;
+        border: .20px solid rgba(0,0,0, .3);
+        text-transform: none;
+    }
     
 }

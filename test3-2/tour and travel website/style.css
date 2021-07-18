@@ -22,6 +22,8 @@
 html{
   font-size: 62.5%;
   overflow-x: hidden;
+  /* overflow-y: scroll; */
+  /* overflow-y: hidden; */
   scroll-padding-top: 6rem;
   scroll-behavior: smooth;
 }
@@ -207,6 +209,7 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
 
 }
 .cart-item.active{
+  display: block;
   top: 0%;
   z-index: 2000;
   height: auto;
@@ -373,6 +376,13 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
   font-size: 5rem;
   color:#fff;
   cursor: pointer;
+}
+.logout-title{
+  color: #eee;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  line-height: 1.3;
 }
 
 #menu-bar{
@@ -596,7 +606,6 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
   
 }
 .services .box-container .box .box-services{
-  
 }
 
 .services .box-container .box i{
@@ -931,6 +940,13 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
   .cart-header{
     top: 0;
     right: 10px;
+  }
+  .logout-title{
+    color: #eee;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    line-height: 1.3;
   }
 
 

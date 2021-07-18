@@ -1,6 +1,6 @@
 let searchBtn = document.querySelector('#search-btn');
 let searchBar = document.querySelector('.search-bar-container');
-// let formBtn = document.querySelector('#login-btn');
+let formBtn = document.getElementById('login-btn');
 let cartBtn = document.getElementById('cart-btn')
 let cartForm = document.querySelector('.cart-item')
 let cartList = document.querySelector('.cart-container')
@@ -18,6 +18,7 @@ let slides = document.querySelectorAll('.home-container')
 let cartCountInfo = document.getElementById('cart-count-info')
 let cartTotalVule = document.getElementById('cart-total-value')
 let getinforBtn = document.getElementById('btn--info')
+let icon = document.querySelector('.icons')
 let index = 0
 let productList = document.querySelector(".box-tour")
 let cartItemID = 1;
@@ -36,13 +37,24 @@ window.addEventListener("DOMContentLoaded", function(){
     navbar.classList.remove('active');
     // loginForm.classList.remove('active');
 }
+
+window.onload = () =>{
+  return localStorage.getItem('current-user') ? getUserLogin() : []
+  
+}
 cartBtn.addEventListener("click", () =>{
   cartForm.classList.add("active")
+  document.querySelector('html').style.overflowY= "hidden"
 })
 cartClose.addEventListener("click", () =>{
   cartForm.classList.remove("active")
+  document.querySelector('html').style.overflowY= "scroll"
+
 })
 cartList.addEventListener("click", deleteItem)
+
+// logout.addEventListener("click", logoutUser)
+
 
 menu.addEventListener('click', () =>{
     menu.classList.toggle('fa-times');
@@ -54,14 +66,13 @@ searchBtn.addEventListener('click', () =>{
     searchBar.classList.toggle('active');
 });
 
-// formBtn.addEventListener('click', () =>{
-//     loginForm.classList.add('active');
-// });
+
 
 // formClose.addEventListener('click', () =>{
 //     loginForm.classList.remove('active');
 // });
 productList.addEventListener('click', purchaseProduct)
+
 
 getinforBtn.addEventListener('click', handleInfor)
 
@@ -270,6 +281,29 @@ function saveProductInStorage(item){
 }
 function getProductFromStorage(){
   return localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
+  
+}
+function getUserLogin(){
+  formBtn.innerHTML = `
+  <p class="logout-title">Logout</p>
+  `;
+  formBtn.addEventListener('click', function(e){
+    e.preventDefault()
+    window.location ="./index.html"
+    localStorage.removeItem('current-user')
+    formBtn.innerHTML = `
+			<i class="fas fa-user" ></i>
+      `;
+    window.location ="./index.html"
+    
+  })
+  // const logout = document.createElement('div')
+  // logout.classList.add('logout')
+  // logout.innerHTML = `
+	// <p class="logout-link">LogOut</p>
+  // `;
+  
+  // icon.appendChild(logout)
   
 }
 function loadCart(){

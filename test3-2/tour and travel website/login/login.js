@@ -78,8 +78,8 @@ let data = [
 		const account = await response.json()
 		account.forEach((value)=>{
 		if(value.passWord === passwordValue) {
+			alert('Bạn đã đăng nhập thành công')
 			localStorage.setItem('current-user', JSON.stringify(account))
-				alert('Bạn đã đăng nhập thành công')
 				window.location = "../index.html"
 				// await updateUser()
 
@@ -124,7 +124,7 @@ let data = [
 				passWord : p2
 			}
 			creatUser(formUserLogin)
-
+			// localStorage.setItem('singUp',JSON.stringify(formUserLogin))
 			
 
 
@@ -155,7 +155,6 @@ let data = [
 
 
 			}
-
 	// if (formLogin.attachEvent) {
 	//     formLogin.attachEvent ('submit', onFormSubmit);
 	// } else {
