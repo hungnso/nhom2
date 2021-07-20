@@ -216,6 +216,18 @@ header .logo span{
     height: 100%;
     object-fit: cover;
 }
+#emailErr{
+    color: red;
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 20px;
+}
+#passwordErr{
+    color: red;
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 20px;
+}
 
 @media (max-width: 1365px){
     .login {

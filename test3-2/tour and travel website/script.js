@@ -291,6 +291,7 @@ function getUserLogin(){
     e.preventDefault()
     window.location ="./index.html"
     localStorage.removeItem('current-user')
+    localStorage.removeItem('products')
     formBtn.innerHTML = `
 			<i class="fas fa-user" ></i>
       `;

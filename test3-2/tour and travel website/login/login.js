@@ -38,63 +38,83 @@ let data = [
 	let inputEmail_login =document.getElementById('email__login');
 	// console.log(inputEmail_login.value)
 	let inputPassword_login  = document.getElementById('pw__login');
-	// console.log(inputPassword_login.value)
-	// let logIn = document.getElementById('submit__login')
-	// logIn.setAttribute('href', 'https://www.google.com')
-	// logIn.addEventListener('click',function(){
-	//        alert('hung')
-	//    })
-
+	let emailErr = document.getElementById('emailErr')
+	let passwordErr = document.getElementById('passwordErr')
+	
 	
 
-
-	// let confirm = document.getElementById('submit__login')
-	// confirm.location.href("http://www.w3schools.com")
-
-	// const url = 'http://localhost:3000/login'
-	// function getUrl(){
-	  
-	//     let emailValue = inputEmail_login.value;
-	//     console.log(emailValue)
-	//     let passwordValue = inputPassword_login.value
-
-	//     fetch(url)
-	//         .then((response) =>{
-	//             return response.json()
-	//         })
-	//         .then ((data) =>{
-	//             data.forEach((value) =>{
-	//                 console.log(value.email)
-	//             })
-	//         })
-	//     }
 	
-	formLogin.onsubmit = async(e) =>{
+	formLogin.onsubmit = (e) =>{
 		e.preventDefault()
-		let emailValue = inputEmail_login.value;
-		let passwordValue = inputPassword_login.value
-		const url = `https://serverjson123.herokuapp.com/login?userName=${emailValue}`;
-		const response = await fetch(url);
-		const account = await response.json()
-		account.forEach((value)=>{
-		if(value.passWord === passwordValue) {
-			alert('Bạn đã đăng nhập thành công')
-			localStorage.setItem('current-user', JSON.stringify(account))
-				window.location = "../index.html"
-				// await updateUser()
-
-			} 
-			else if( emailValue !== value.userName){
-				alert('Lai sai')
-			} else{
-				alert('Mật khẩu không chính xác')
-			}
-	 	})
-		
-
+		checkEmail()
+		checkpassWord()
+		if(checkEmail() && checkpassWord()){
+			handelLogin()
+		}
+	
 	   
 	 }
+async function handelLogin(){
+	let emailValue = inputEmail_login.value;
+	let passwordValue = inputPassword_login.value
+	const url = 'https://serverjson123.herokuapp.com/login';
+	const response = await fetch(url);
+	const accounts = await response.json()
+	if (
+		accounts.some((account) =>
+			account.email === emailValue &&
+			account.passWord === passwordValue)) {
+			console.log(accounts)
+		let loginUser = accounts.find((account) =>
+			account.email === emailValue &&
+			account.passWord === passwordValue)
+		console.log(loginUser);
 
+		localStorage.setItem('current-user', JSON.stringify(accounts))
+		alert("Đăng nhập thành công")
+		window.location = "../index.html"
+	} else {
+		alert("Tên tài khoản hoặc mật khẩu không chính xác");
+	}
+	
+}
+function checkEmail(){
+		 if(inputEmail_login.value === ""){
+			 emailErr.innerHTML = "Hãy nhập email"
+			 return false
+
+
+		 } else{
+			 return true
+		 }
+		 
+}
+function checkpassWord(){
+		 if(inputPassword_login.value === ""){
+			 passwordErr.innerHTML = "Hãy nhập mật khẩu"
+			 return false
+
+		 } else{
+			 return true
+		 }
+}
+function check(){
+		 if(inputPassword_login.value === "" && inputEmail_login.value ===""){
+			 alert('Hãy nhập email và mật khẩu')
+			 return false
+
+
+		 } else{
+			 return true
+		 }
+}
+
+
+
+	
+
+
+	
 	let userAPI = "https://serverjson123.herokuapp.com/login"
 	function creatUser(data,cb){
 			let option = {
@@ -120,7 +140,7 @@ let data = [
 			let p2 = document.getElementById("password--confirm").value;
 
 			let formUserLogin ={
-				userName : email,
+				email : email,
 				passWord : p2
 			}
 			creatUser(formUserLogin)
@@ -141,11 +161,7 @@ let data = [
 				return false;
 				} else{
 				alert("Đăng ký thành công")
-				let formUser = {
-					email: email,
-					passWord: p2
-				}
-				creatUser(formUser)
+			
 				window.location = "login.html"
 
 				}
