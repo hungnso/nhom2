@@ -107,26 +107,35 @@ let confirmpasswordErr = document.getElementById('confirmpasswordErr')
 	}
 
 	let email = document.getElementById("email");
-	console.log(email)
+	console.log(email.value)
 	let p1 = document.getElementById("password");
+	console.log(p1.value)
 	let p2 = document.getElementById("password--confirm");
 
-	formSignUp.onsubmit = async(e) =>{
+	formSignUp.onsubmit = (e) =>{
 		e.preventDefault()
 		sigupEmail()
 		siguppassWord()
 		confirmPassWord()
+		if(sigupEmail() && siguppassWord()){
+			handelsingUp()
+		} else{
+			alert('sai')
+		}
 		
-			let formUserLogin ={
-				email : email,
-				passWord : p2
-			}
-			creatUser(formUserLogin)
-				
+		
 
 
 
 			}
+	function handelsingUp(){
+		let formUserLogin ={
+			email : email.value,
+			passWord : p2.value
+		}
+		creatUser(formUserLogin)
+		alert('Bạn đã đăng kí thành công ')
+	}
 	function sigupEmail(){
 		if(email.value === ""){
 			sigupemailErr.innerHTML = "Bạn chưa nhập Email"
