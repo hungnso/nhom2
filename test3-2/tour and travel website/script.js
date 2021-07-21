@@ -19,11 +19,11 @@ let cartCountInfo = document.getElementById('cart-count-info')
 let cartTotalVule = document.getElementById('cart-total-value')
 let getinforBtn = document.getElementById('btn--info')
 let icon = document.querySelector('.icons')
+let btnOder = document.querySelector('.btn--order')
 let index = 0
 let productList = document.querySelector(".box-tour")
 let cartItemID = 1;
 
-eventListener()
 
 function eventListener(){
 window.addEventListener("DOMContentLoaded", function(){
@@ -52,6 +52,7 @@ cartClose.addEventListener("click", () =>{
 
 })
 cartList.addEventListener("click", deleteItem)
+btnOder.addEventListener("click", handelOder)
 
 // logout.addEventListener("click", logoutUser)
 
@@ -65,7 +66,6 @@ searchBtn.addEventListener('click', () =>{
     searchBtn.classList.toggle('fa-times');
     searchBar.classList.toggle('active');
 });
-
 
 
 // formClose.addEventListener('click', () =>{
@@ -101,6 +101,9 @@ prev.addEventListener('click', function prev(){
 })
 
 }
+eventListener()
+
+
 
 
 
@@ -372,4 +375,16 @@ function deleteItem(e){
     localStorage.setItem('products', JSON.stringify(updatedProducts)); 
     updateCartInfo();
 
+}
+
+function handelOder(){
+  if(localStorage.getItem('current-user')){
+    alert('Thành công')
+    localStorage.removeItem('products')
+    window.location = "./index.html"
+  } else{
+    alert('Bạn cần đăng nhập để tiếp tục')
+    window.location = "./login/login.html"
+    
+  }
 }
