@@ -119,9 +119,7 @@ let confirmpasswordErr = document.getElementById('confirmpasswordErr')
 		confirmPassWord()
 		if(sigupEmail() && siguppassWord()){
 			handelsingUp()
-		} else{
-			alert('sai')
-		}
+		} 
 		
 		
 
