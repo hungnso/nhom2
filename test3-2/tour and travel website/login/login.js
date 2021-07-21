@@ -133,6 +133,7 @@ let confirmpasswordErr = document.getElementById('confirmpasswordErr')
 		}
 		creatUser(formUserLogin)
 		alert('Bạn đã đăng kí thành công ')
+		window.location ='./login.html'
 	}
 	function sigupEmail(){
 		if(email.value === ""){
