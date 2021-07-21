@@ -10,6 +10,8 @@
 	let inputPassword_login  = document.getElementById('pw__login');
 	let emailErr = document.getElementById('emailErr')
 	let passwordErr = document.getElementById('passwordErr')
+
+	
 	
 	
 
@@ -84,7 +86,9 @@ function check(){
 	
 
 
-	
+let sigupemailErr = document.getElementById('singupEmailErr')
+let singuppasswordErr = document.getElementById('singuppasswordErr')
+let confirmpasswordErr = document.getElementById('confirmpasswordErr')
 	let userAPI = "https://serverjson123.herokuapp.com/login"
 	function creatUser(data,cb){
 			let option = {
@@ -102,59 +106,46 @@ function check(){
 				.then(cb)
 	}
 
+	let email = document.getElementById("email");
+	console.log(email)
+	let p1 = document.getElementById("password");
+	let p2 = document.getElementById("password--confirm");
+
 	formSignUp.onsubmit = async(e) =>{
 		e.preventDefault()
-			let email = document.getElementById("email").value;
-			console.log(email)
-			let p1 = document.getElementById("password").value;
-			let p2 = document.getElementById("password--confirm").value;
-
+		sigupEmail()
+		siguppassWord()
+		confirmPassWord()
+		
 			let formUserLogin ={
 				email : email,
 				passWord : p2
 			}
 			creatUser(formUserLogin)
-			// localStorage.setItem('singUp',JSON.stringify(formUserLogin))
-			
-
-
-			if(email== "") {
-				alert("Vui lòng nhập email!");
-				return false;
-				}
-				else if(p1 == "") {
-				alert("Vui lòng nhập mật khẩu!");
-				return false;
-				}
-				else if(p2 !== p1) {
-				alert("Mật khẩu nhập không trùng khớp!");
-				return false;
-				} else{
-				alert("Đăng ký thành công")
-			
-				window.location = "login.html"
-
-				}
-
 				
 
 
 
 			}
-	// if (formLogin.attachEvent) {
-	//     formLogin.attachEvent ('submit', onFormSubmit);
-	// } else {
-	//     formLogin.addEventListener('submit', onFormSubmit);
-	// }function onFormSubmit(e) {
-	//     let email = inputEmail_login.value;
-	//     let password = inputPassword_login.value;
+	function sigupEmail(){
+		if(email.value === ""){
+			sigupemailErr.innerHTML = "Bạn chưa nhập Email"
+			return false
+		} else{
+			return true
+		}
+	}
+	function siguppassWord(){
+		if(p1.value ===""){
+			singuppasswordErr.innerHTML = "Bạn chưa nhập Mật khẩu"
+		return false
 
-	//     if (email.value == 1 && password.value == 1) {
-	//         alert('Dang nhap thanh cong');
-	//     } else {
-	//         alert('That bai');
-	//     }
-	// }
-
-
-	
+		} else{
+			return true
+		}
+	}
+	function confirmPassWord(){
+		if(p1.value != p2.value){
+			confirmpasswordErr.innerHTML = "Mật khẩu chưa trùng khớp"
+		}
+	}
