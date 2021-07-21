@@ -1,12 +1,22 @@
 const reviewList = document.querySelector('.review-content')
+const headerList = document.querySelector(".title-text")
+
+let title = localStorage.getItem('title')
+
+// window.addEventListener("DOMContentLoaded", function(){
+//   // getheaderList()
+
+//   getReview()
+// })
 
 
-window.addEventListener("DOMContentLoaded", function(){
-  getReview()
-})
+function getheaderList(){
+ headerList.innerHTML = `${title}`
+}
 const reviewAPI = 'https://serverjson123.herokuapp.com/reviews'
 
 function getReview(){
+
   fetch(reviewAPI)
    .then((response) =>{
      return response.json()
@@ -25,7 +35,7 @@ function getReview(){
         <div class="col l-6 c-12 m-12">
           <div class="desc">
             <span class="day-tour">Day ${content.day}</span>
-            <h2>Athens, Greece</h2>
+            <h2>${title}</h2>
             <p>${content.content}</p>
           </div>
         </div>
@@ -38,3 +48,5 @@ function getReview(){
     
    })
 }
+getheaderList()
+getReview()

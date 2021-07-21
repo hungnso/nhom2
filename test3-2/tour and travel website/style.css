@@ -248,9 +248,12 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
 }
 .cart-img{
   width: calc(50% - 30px);
+  height: 400px;
+  object-fit: cover;
   margin-right: 30px;
 
 }
+
 .cart-tour{
   width: 50%;
   text-align: center;
@@ -859,6 +862,12 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
   .cart-tour-price{
     font-size: 20px;
   }
+  .packages .box-container .box img {
+    height: 50rem;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.4s linear;
+}
 
   
 }
@@ -934,6 +943,8 @@ background: linear-gradient(6deg, rgba(72,77,67,1) 0%, rgba(0,145,141,1) 50%, rg
     flex-direction: column;
   }
   .cart-img{
+    height: 250px;
+    object-fit: cover;
     width: 100%;
     margin-right: 0;
   }

@@ -229,7 +229,17 @@ function purchaseProduct(e){
     let product = e.target.parentElement
     getProductInfo(product)
     console.log(product)
+  } else{
+    let product = e.target.parentElement
+    getTitle(product)
+   
+
   }
+}
+
+function getTitle(data){
+  let title = data.querySelector('.content h3').textContent
+  localStorage.setItem("title", title)
 }
 
 function getProductInfo(data){
@@ -250,7 +260,10 @@ function getProductInfo(data){
 function addToCartList(data){
   const cartItem = document.createElement('div')
   cartItem.classList.add('cart-book');
+
   cartItem.setAttribute('data-id', `${data.id}`)
+
+
   cartItem.innerHTML = `
   <img src="${data.imgSrc}" alt="" class="cart-img">
   <div class="cart-tour">

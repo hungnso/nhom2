@@ -1,34 +1,4 @@
-let data = [
-	{
-		email:"",
-		password: "",
-	}
-];
-// function validate() {
-// 	let email = document.getElementById("email").value;
-// 	console.log(email)
-// 	let p1 = document.getElementById("password").value;
-// 	let p2 = document.getElementById("password--confirm").value;
-	 
-	// if(email== "") {
-	// alert("Vui lòng nhập email!");
-	// return false;
-	// }
-	// else if(p1 == "") {
-	// alert("Vui lòng nhập mật khẩu!");
-	// return false;
-	// }
-	// else if(p2 !== p1) {
-	// alert("Mật khẩu nhập không trùng khớp!");
-	// return false;
-	// }
-	// alert("Đăng ký thành công")
-	// return true;
-	// }
 
-	// window.addEventListener("DOMContentLoaded", function(){
-	//     getUrl()
-	//   })
 	
    
 	let formLogin = document.getElementById('form__login');
